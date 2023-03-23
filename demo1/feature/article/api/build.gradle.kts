@@ -4,7 +4,6 @@ plugins {
 }
 
 dependencies{
-//    api(libs.spring.boot.starter.web)
     api(project(":core:api"))
     implementation(project(":feature:article:service"))
 }
