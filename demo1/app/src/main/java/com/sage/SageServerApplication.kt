@@ -1,4 +1,4 @@
-package com.sage.server
+package com.sage
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

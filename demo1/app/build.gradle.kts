@@ -11,6 +11,7 @@ dependencies {
     implementation(libs.spring.boot.starter.web)
     implementation(libs.jackson.module.kotlin)
     implementation(libs.mysql.connector.java)
+    implementation(project(":feature:article:article-api"))
 //    implementation(kotlin("stdlib-jdk8"))
 }
 

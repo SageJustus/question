@@ -1,7 +1,8 @@
 plugins {
     id("sage.springboot")
+    alias(libs.plugins.kotlin.jpa)
 }
 
 dependencies{
-    implementation(project(":core:database"))
+    api(project(":core:core-database"))
 }

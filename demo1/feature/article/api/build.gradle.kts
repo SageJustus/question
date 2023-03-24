@@ -4,6 +4,6 @@ plugins {
 }
 
 dependencies{
-    api(project(":core:api"))
-    implementation(project(":feature:article:service"))
+    api(project(":core:core-api"))
+    api(project(":feature:article:service"))
 }
