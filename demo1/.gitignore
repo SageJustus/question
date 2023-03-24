@@ -1,12 +1,3 @@
-.gradle
-.idea
-build
-out
-target
-**/gradle/wrapper/*
-!**/gradle-wrapper.properties
-gradlew
-gradlew.bat
 HELP.md
 .gradle
 build/
@@ -48,4 +39,4 @@ out/
 ### Gradle Wrapper ###
 gradlew
 gradlew.bat
-**/gradle/wrapper
+gradle/wrapper
