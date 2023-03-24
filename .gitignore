@@ -1,0 +1,9 @@
+.gradle
+.idea
+build
+out
+target
+**/gradle/wrapper/*
+!**/gradle-wrapper.properties
+gradlew
+gradlew.bat
