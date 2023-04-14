@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {UploadOutlined} from '@ant-design/icons';
 import './App.css';
 import {Button, Upload, UploadFile, UploadProps} from 'antd';
-import {log} from "util";
 
 function App() {
 
@@ -47,14 +46,15 @@ function App() {
 
   const props: UploadProps = {
     onChange: ({fileList: newFileList}) => {
-      setFileList(newFileList)
+      setFileList([...newFileList])
       console.log(2)
       newFileList.forEach(it => console.log(it))
     },
     customRequest: ({onSuccess, file}) => {
       console.log(1)
       onSuccess?.(file)
-    }
+    },
+    fileList: fileList
   };
 
   return (
