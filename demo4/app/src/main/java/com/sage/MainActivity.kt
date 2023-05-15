@@ -20,6 +20,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -93,7 +94,7 @@ fun ArticleScreen(
       Text("Show Modal")
     }
   }
-  Order(
+  Modal(
     modalState = state.orderModalState,
   )
 }
@@ -105,6 +106,8 @@ class SageSheetState(
   openBottomSheet: Boolean = false
 ) {
   var openBottomSheet by mutableStateOf(openBottomSheet)
+    private set
+
 
   fun showModal() {
     coroutineScope.launch {
@@ -124,9 +127,13 @@ class SageSheetState(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Order(
+fun Modal(
   modalState: SageSheetState
 ) {
+
+  DisposableEffect(modalState.openBottomSheet) {
+    onDispose { }
+  }
 
 // Sheet content
   if (modalState.openBottomSheet) {
