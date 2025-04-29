@@ -19,7 +19,6 @@ class SecurityPreAuthorizeAuthorizationManager : AuthorizationManager<MethodInvo
         o: MethodInvocation
     ): AuthorizationDecision? {
         val auth = authentication.get()
-        // SUPER ADMIN 允许通行所有的
         if (auth.authorities.contains(SimpleGrantedAuthority("ROLE_SUPER_ADMIN"))){
             return AuthorizationDecision(true)
         }
