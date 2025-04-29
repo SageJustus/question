@@ -1,0 +1,7 @@
+logging:
+  level:
+    com:
+      sage: trace
+    org:
+      springframework:
+        security: trace

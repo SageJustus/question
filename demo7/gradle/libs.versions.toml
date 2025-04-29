@@ -1,0 +1,48 @@
+# Version catalog is a central place for you to declare and version dependencies
+# https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog
+# https://docs.gradle.org/current/userguide/platforms.html#sub::toml-dependencies-format
+
+[versions]
+kotlin = "2.1.20"
+kotlinxDatetime = "0.6.1"
+kotlinxSerializationJSON = "1.7.2"
+kotlinxCoroutines = "1.8.1"
+logback = "1.5.18"
+jansi = "2.4.1"
+ooxml = "5.4.0"
+springboot = "3.4.4"
+mapstruct =  "1.6.3"
+
+[libraries]
+kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlinxDatetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
+kotlinxSerialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJSON" }
+kotlinxCoroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+kotlinReflect = {module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin"}
+logbackClassic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
+jansi = { module = "org.fusesource.jansi:jansi", version.ref = "jansi" }
+ooxml = { module = "org.apache.poi:poi-ooxml", version.ref = "ooxml" }
+springBootStarter = { module = "org.springframework.boot:spring-boot-starter" }
+springBootStarterTest = { module = "org.springframework.boot:spring-boot-starter-test" }
+springBootStarterWeb = { module = "org.springframework.boot:spring-boot-starter-web" }
+springBootStarterDataJpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa" }
+springBootStarterDataRedis = { module = "org.springframework.boot:spring-boot-starter-data-redis" }
+springBootStarterSecurity = { module = "org.springframework.boot:spring-boot-starter-security" }
+kotlinTestJunit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5" }
+postgresql = {module = "org.postgresql:postgresql"}
+mapstruct = {module = "org.mapstruct:mapstruct", version.ref = "mapstruct"}
+mapstructProcessor = { module = "org.mapstruct:mapstruct-processor",version.ref = "mapstruct" }
+[bundles]
+kotlinxEcosystem = ["kotlinxDatetime", "kotlinxSerialization", "kotlinxCoroutines"]
+
+[plugins]
+kotlinPluginSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlinJpa = { id = "org.jetbrains.kotlin.plugin.jpa", version.ref = "kotlin" }
+kotlinNoArg = { id = "org.jetbrains.kotlin.plugin.noarg", version.ref = "kotlin" }
+kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+kotlinSpring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
+springboot = { id = "org.springframework.boot", version.ref = "springboot" }
+springDependencyManagement = { id = "io.spring.dependency-management", version = "1.1.7" }
+lombok = { id = "org.jetbrains.kotlin.plugin.lombok", version = "1.8.10" }
+freefairLombok = { id = "io.freefair.lombok", version = "8.13" }
